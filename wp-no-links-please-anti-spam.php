@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: No links please! Anti-spam
+Plugin Name: No links please! Anti-SPAM
 Version:     1.3.0
-Description: This simple but effective anti-spam system protects your WordPress site from spam. It works without imposing annoying CAPTCHAs, quizzes, configurations, third-party services, artificial intelligence or unicorns. How? It just drops any anonymous comment with links inside, alerting humans about this netiquette.
+Description: This simple but effective anti-SPAM system protects your WordPress site from SPAM. It works without imposing annoying CAPTCHAs, quizzes, configurations, third-party services, artificial intelligence or unicorns. How? It just drops any anonymous comment with links inside, alerting humans about this netiquette.
 Author:      Valerio Bozzolan
 Author URI:  https://boz.reyboz.it/
 Plugin URI:  https://github.com/valerio-bozzolan/wp-no-links-please-anti-spam
@@ -56,7 +56,7 @@ add_filter( 'comment_form_default_fields', 'no_links_please_anti_spam_form_defau
 function no_links_please_anti_spam_counter() {
 	return get_option( 'no_links_please_anti_spam_count', 0 );
 }
-add_shortcode( 'no_links_please_spammers_counter', 'no_links_please_anti_spam_counter' );
+add_shortcode( 'no_links_please_anti_spam_counter', 'no_links_please_anti_spam_counter' );
 
 /**
  * Register the unuseful Dashboard widget

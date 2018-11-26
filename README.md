@@ -14,7 +14,7 @@ If your spam always contains links this could be your definitive solution.
 ## Antifeatures
 
 * It provides an unuseful Dashboard widget
-* It provides an unuseful shortcode (`[no_links_please_spammers_counter]`)
+* It provides an unuseful shortcode (`[no_links_please_anti_spam_counter]`)
 * It prevents URLs in comments from anonymous users
 
 ## Installation

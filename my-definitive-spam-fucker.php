@@ -21,6 +21,7 @@ function my_definitive_spam_fucker_handler( $approved, $commentdata ) {
 		$found = preg_match( '@https?://[^\",]+@i', $commentdata[ 'comment_content' ] );
 		if( ! empty( $commentdata[ 'comment_author_url' ] ) || $found === 1 ) {
 			$message = __( "You triggered My Definitive SPAM Fucker. Please remove URLs from your comment.", 'definitive-spam-fucker' );
+			$message = apply_filters( 'my_definitive_spam_fucker_message', $message );
 			wp_die( $message, $title, [
 				'response'  => 400,
 				'back_link' => true,
@@ -30,4 +31,4 @@ function my_definitive_spam_fucker_handler( $approved, $commentdata ) {
 	return $approved;
 }
 
-add_filter( 'pre_comment_approved' , 'my_definitive_spam_fucker' , '99', 2 );
+add_filter( 'pre_comment_approved' , 'my_definitive_spam_fucker_handler' , '99', 2 );

@@ -16,7 +16,12 @@ This astonishing-simple and really-effective anti-SPAM system just works. It def
 
 ## Installation
 
-As every WordPress plugin.
+As every WordPress plugin:
+
+1. Download this repository as `.zip` file ([master.zip](https://github.com/valerio-bozzolan/wp-my-definitive-spam-fucker/archive/master.zip))
+2. Place it in your `/wp-content/plugins/` directory
+3. Activate the plugin
+4. Do not put URLs into your comments when not logged-in :^)
 
 ## Customization
 

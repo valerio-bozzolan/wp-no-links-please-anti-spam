@@ -6,6 +6,18 @@ This astonishing-simple and really-effective anti-SPAM system just works. It def
 
 As every WordPress plugin.
 
+## Features
+
+* It's astonishingly lightweight
+* It's impressively not full of crapware
+* It automagically works
+
+## Antifeatures
+
+* It provides an unuseful Dashboard widget
+* It provides an unuseful shortcode (`[spammers_fucked]`)
+* It prevents URLs in comments from anonymous users
+
 ## Customization
 
 To customize the error message put this somewhere in the `functions.php` of your WordPress theme:

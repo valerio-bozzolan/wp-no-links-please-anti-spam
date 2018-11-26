@@ -2,6 +2,8 @@
 
 This astonishing-simple and really-effective anti-SPAM system just works. It definitively protects your WordPress site from SPAM without imposing annoying CAPTCHAs, configurations, third-party services, blockchains, artificial intelligence or unicorns. Oh, just avoid URLs in comments when not logged-in :^)
 
+If your spam always contains links this could be your definitive solution.
+
 ## Features
 
 * It prevent anonymous spammers from flooding your website with comments with links
@@ -19,7 +21,7 @@ This astonishing-simple and really-effective anti-SPAM system just works. It def
 
 As every WordPress plugin:
 
-1. Download this repository as `.zip` file ([master.zip](https://github.com/valerio-bozzolan/wordpress-please-no-links-please-anti-spam-plugin/archive/master.zip))
+1. Download this repository as `.zip` file ([master.zip](https://github.com/valerio-bozzolan/wp-no-links-please-anti-spam/archive/master.zip))
 2. Place it in your `/wp-content/plugins/` directory
 3. Activate the plugin
 4. Do not put URLs into your comments when not logged-in :^)

@@ -40,6 +40,17 @@ function my_definitive_spam_fucker_handler( $approved, $commentdata ) {
 add_filter( 'pre_comment_approved', 'my_definitive_spam_fucker_handler', '99', 2 );
 
 /**
+ * Remove the author URL from the comment form for anonymous users
+ */
+function my_definitive_spam_fucker_form_default_fields( $fields ) {
+	if( ! is_user_logged_in() ) {
+		unset( $fields[ 'url' ] );
+	}
+	return $fields;
+}
+add_filter( 'comment_form_default_fields', 'my_definitive_spam_fucker_form_default_fields' );
+
+/**
  * Unuseful callback fired when the shortcode is used
  */
 function my_definitive_spam_fucker_counter() {

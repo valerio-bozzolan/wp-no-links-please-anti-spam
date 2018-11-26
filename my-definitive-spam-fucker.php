@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) or die( 'Hello lamer!' );
  * @since 1.0.0
  */
 function my_definitive_spam_fucker_handler( $approved, $commentdata ) {
-	if( empty( $commentdata[ 'user_ID' ] ) ) {
+	if( empty( $commentdata[ 'user_ID' ] ) && empty( $commentdata[ 'type' ] ) ) {
 		$found = preg_match( '@https?://[^\",]+@i', $commentdata[ 'comment_content' ] );
 		if( ! empty( $commentdata[ 'comment_author_url' ] ) || $found === 1 ) {
 			// increment counters

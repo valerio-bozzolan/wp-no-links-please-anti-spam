@@ -5,3 +5,11 @@ This astonishing-simple and really-effective anti-SPAM system just works. It def
 ## Installation
 
 As every WordPress plugin.
+
+## Customization
+
+To customize the message put this somewhere in the `functions.php` of your WordPress theme:
+
+	add_filter( 'my_definitive_spam_fucker_message', function () {
+		return "<b>Error</b>: Fuck you, and your URLs!";
+	} );

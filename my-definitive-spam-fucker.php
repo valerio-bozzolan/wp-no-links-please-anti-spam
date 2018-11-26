@@ -1,10 +1,11 @@
 <?php
 /*
 Plugin Name: My Definitive SPAM Fucker
-Version:     1.0.0
+Version:     1.1.0
 Description: This astonishing-simple and really-effective anti-SPAM system just works. It definitively protects your WordPress site from SPAM without imposing annoying CAPTCHAs, configurations, third-party services, blockchains, artificial intelligence or unicorns. Oh, just avoid URLs in comments when not logged-in :^)
 Author:      Valerio Bozzolan
 Author URI:  https://boz.reyboz.it/
+Plugin URI:  https://github.com/valerio-bozzolan/wp-my-definitive-spam-fucker
 License:     GPL3+
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */

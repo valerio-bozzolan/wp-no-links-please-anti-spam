@@ -4,6 +4,7 @@ This astonishing-simple and really-effective anti-SPAM system just works. It def
 
 ## Features
 
+* Politically correct and anyway completly customizable error message (e.g. as default without any "fuck")
 * It's astonishingly lightweight
 * It's impressively not full of crapware
 * It automagically works

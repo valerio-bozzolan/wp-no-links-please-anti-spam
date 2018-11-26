@@ -27,7 +27,7 @@ function my_definitive_spam_fucker_handler( $approved, $commentdata ) {
 			update_option( 'my_definitive_spam_fucker_count', my_definitive_spam_fucker_counter() + 1, false );
 
 			// die with a message
-			$message = __( "You triggered My Definitive SPAM Fucker. Please remove URLs from your comment.", 'my-definitive-spam-fucker' );
+			$message = __( "You triggered my anti-SPAM system. Please remove URLs from your comment.", 'my-definitive-spam-fucker' );
 			$message = apply_filters( 'my_definitive_spam_fucker_message', $message );
 			wp_die( $message, $title, [
 				'response'  => 400,

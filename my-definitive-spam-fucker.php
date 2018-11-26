@@ -23,8 +23,7 @@ function my_definitive_spam_fucker_handler( $approved, $commentdata ) {
 		$found = preg_match( '@https?://[^\",]+@i', $commentdata[ 'comment_content' ] );
 		if( ! empty( $commentdata[ 'comment_author_url' ] ) || $found === 1 ) {
 			// increment counters
-			$count = get_option( 'my_definitive_spam_fucker_count', 0 );
-			update_option( 'my_definitive_spam_fucker_count', $count + 1, false );
+			update_option( 'my_definitive_spam_fucker_count', my_definitive_spam_fucker_counter() + 1, false );
 
 			// die with a message
 			$message = __( "You triggered My Definitive SPAM Fucker. Please remove URLs from your comment.", 'my-definitive-spam-fucker' );
@@ -40,22 +39,12 @@ function my_definitive_spam_fucker_handler( $approved, $commentdata ) {
 add_filter( 'pre_comment_approved', 'my_definitive_spam_fucker_handler', '99', 2 );
 
 /**
- * Unuseful callback fired when the plugin is activated
+ * Unuseful callback fired when the shortcode is used
  */
-function my_definitive_spam_fucker_activation() {
-	add_option( 'my_definitive_spam_fucker_init',  date('U'), '', false );
-	add_option( 'my_definitive_spam_fucker_count', 0        , '', false );
+function my_definitive_spam_fucker_counter() {
+	return get_option( 'my_definitive_spam_fucker_count', 0 );
 }
-register_uninstall_hook( __FILE__, 'my_definitive_spam_fucker_activation' );
-
-/**
- * Unuseful callback fired when the plugin is uninstalled
- */
-function my_definitive_spam_fucker_uninstall() {
-	delete_option( 'my_definitive_spam_fucker_init' );
-	delete_option( 'my_definitive_spam_fucker_count' );
-}
-register_uninstall_hook( __FILE__, 'my_definitive_spam_fucker_uninstall' );
+add_shortcode( 'spammers_fucked', 'my_definitive_spam_fucker_counter' );
 
 /**
  * Register the unuseful Dashboard widget
@@ -71,8 +60,29 @@ function my_definitive_spam_fucker_dashboard_widget_content() {
 	echo '<p>';
 	printf(
 		__( "Spammers fucked since activation: %s and counting!", 'my-definitive-spam-fucker' ),
-		'<b>' . get_option( 'my_definitive_spam_fucker_count', 0 ) . '</b>'
+		'<b>' . my_definitive_spam_fucker_counter() . '</b>'
 	);
 	echo '</p>';
 }
 add_action( 'wp_dashboard_setup', 'my_definitive_spam_fucker_dashboard_widget' );
+
+// allow shortcodes to be used in widgets
+add_filter( 'widget_text', 'do_shortcode' );
+
+/**
+ * Unuseful callback fired when the plugin is activated
+ */
+function my_definitive_spam_fucker_activation() {
+	add_option( 'my_definitive_spam_fucker_init',  date('U') );
+	add_option( 'my_definitive_spam_fucker_count', 0 );
+}
+register_uninstall_hook( __FILE__, 'my_definitive_spam_fucker_activation' );
+
+/**
+ * Unuseful callback fired when the plugin is uninstalled
+ */
+function my_definitive_spam_fucker_uninstall() {
+	delete_option( 'my_definitive_spam_fucker_init' );
+	delete_option( 'my_definitive_spam_fucker_count' );
+}
+register_uninstall_hook( __FILE__, 'my_definitive_spam_fucker_uninstall' );

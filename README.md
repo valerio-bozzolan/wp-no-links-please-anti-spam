@@ -2,10 +2,6 @@
 
 This astonishing-simple and really-effective anti-SPAM system just works. It definitively protects your WordPress site from SPAM without imposing annoying CAPTCHAs, configurations, third-party services, blockchains, artificial intelligence or unicorns. Oh, just avoid URLs in comments when not logged-in :^)
 
-## Installation
-
-As every WordPress plugin.
-
 ## Features
 
 * It's astonishingly lightweight
@@ -17,6 +13,10 @@ As every WordPress plugin.
 * It provides an unuseful Dashboard widget
 * It provides an unuseful shortcode (`[spammers_fucked]`)
 * It prevents URLs in comments from anonymous users
+
+## Installation
+
+As every WordPress plugin.
 
 ## Customization
 

@@ -31,4 +31,4 @@ function my_definitive_spam_fucker_handler( $approved, $commentdata ) {
 	return $approved;
 }
 
-add_filter( 'pre_comment_approved' , 'my_definitive_spam_fucker_handler' , '99', 2 );
+add_filter( 'pre_comment_approved', 'my_definitive_spam_fucker_handler', '99', 2 );

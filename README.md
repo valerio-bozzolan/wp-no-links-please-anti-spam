@@ -2,14 +2,15 @@
 
 This astonishing-simple and really-effective anti-SPAM system just works. It definitively protects your WordPress site from SPAM without imposing annoying CAPTCHAs, configurations, third-party services, blockchains, artificial intelligence or unicorns. Oh, just avoid URLs in comments when not logged-in :^)
 
-If your spam always contains links this could be your definitive solution.
+If your SPAM always contains links this could be your definitive solution.
 
 ## Why it works
 
-You can't really stop SPAM bots. Bots try to submit tons of links in the hope that search engines will index them. Fortunately, WordPress now already de-index them as default, but unfortunately bots do their job anyway.
-Without the phisical ability to publish links, every spam bot of this kind has no sense.
+You can't really stop SPAM-bots. Bots try to submit tons of links into your comments in the hope that search engines will index them. Fortunately WordPress already de-index them since years as default but unfortunately bots do their job anyway, shooting in the mass and hoping to find a way to spread their spam via web.
 
-With this (a bit severe) plugin, this kind of comments will be just dropped before reaching your database, saving you time and efforts.
+Here is the idea: applying a small "no links please!" netiquette you can pratically kill every SPAM-bot of this kind at their deep intentions, before even reaching your database.
+
+Tl;dr If you do not write links you are a good human.
 
 ## Features
 

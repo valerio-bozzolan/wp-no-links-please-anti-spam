@@ -24,7 +24,7 @@ Tl;dr If you do not write links you are a good human.
 
 ## Known bugs
 
-* It imposes a netiquette
+* None! Only features. asd
 
 ## Installation
 

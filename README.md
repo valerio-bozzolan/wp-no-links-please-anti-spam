@@ -30,6 +30,12 @@ As every WordPress plugin:
 
 To customize the error message put this somewhere in the `functions.php` of your WordPress theme:
 
-	add_filter( 'no_links_please_anti_spam_message', function () {
+	add_filter( 'no_links_please_anti_spam_error', function () {
 		return "<b>Error</b>: Sir, please try again removing all the links from your comment. Yes, your comment was just dropped. Apologies, but SPAM is a bad beast.";
+	} );
+
+To customize the netiquette message instead:
+
+	add_filter( 'no_links_please_anti_spam_netiquette', function () {
+		return "Sir, before submitting just remember to avoid links. Cheers!";
 	} );

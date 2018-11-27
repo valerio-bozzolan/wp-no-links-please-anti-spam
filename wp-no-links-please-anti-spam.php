@@ -26,9 +26,9 @@ function no_links_please_anti_spam_handler( $approved, $commentdata ) {
 			// increment counters
 			update_option( 'no_links_please_anti_spam_count', no_links_please_anti_spam_counter() + 1, false );
 
-			// die with a message
-			$message = __( "Please try again but without links in the comment. Thank you.", 'no-links-please-anti-spam' );
-			$message = apply_filters( 'no_links_please_anti_spam_message', $message );
+			// die with an error message
+			$message = __( "Please try again but without links in the text. Thank you.", 'no-links-please-anti-spam' );
+			$message = apply_filters( 'no_links_please_anti_spam_error', $message );
 			wp_die( $message, $title, [
 				'response'  => 400,
 				'back_link' => true,
@@ -44,7 +44,13 @@ add_filter( 'pre_comment_approved', 'no_links_please_anti_spam_handler', '99', 2
  */
 function no_links_please_anti_spam_form_default_fields( $fields ) {
 	if( ! is_user_logged_in() ) {
+		// remove author URL
 		unset( $fields[ 'url' ] );
+
+		// show netiquette message
+		$netiquette = __( "Please remember that links are not appreciated inside the comment.", 'no-links-please-anti-spam' );
+		$netiquette = apply_filters( 'no_links_please_anti_spam_netiquette', $netiquette );
+		$fields[ 'comment_form_before' ] .= "<p class=\"no-links-please-anti-spam-netiquette\">$netiquette</p>";
 	}
 	return $fields;
 }

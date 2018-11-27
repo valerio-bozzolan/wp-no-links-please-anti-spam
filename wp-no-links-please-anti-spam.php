@@ -48,7 +48,7 @@ function no_links_please_anti_spam_form_default_fields( $fields ) {
 		unset( $fields[ 'url' ] );
 
 		// show netiquette message
-		$netiquette = __( "Please remember that links are not appreciated inside the comment.", 'no-links-please-anti-spam' );
+		$netiquette = __( "Please remember that links are not appreciated inside comments.", 'no-links-please-anti-spam' );
 		$netiquette = apply_filters( 'no_links_please_anti_spam_netiquette', $netiquette );
 		$fields[ 'comment_form_before' ] .= "<p class=\"no-links-please-anti-spam-netiquette\">$netiquette</p>";
 	}

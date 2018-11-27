@@ -46,3 +46,7 @@ To customize the netiquette message put this instead:
 	add_filter( 'no_links_please_anti_spam_netiquette', function () {
 		return "Sir, before submitting just remember to avoid links. Cheers!";
 	} );
+
+## Credits
+
+I would like to thank the veteran unix sysadmin Massimo Nuvoli as my spiritual reference in mastering about Italian profanities, and for his talk about [SPAM fighting at Linux Day Torino 2018](https://linuxdaytorino.org/2018/#programma) as well.

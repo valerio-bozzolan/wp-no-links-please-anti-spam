@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) or die( 'Hello lamer!' );
  */
 function no_links_please_anti_spam_handler( $approved, $commentdata ) {
 	if( empty( $commentdata[ 'user_ID' ] ) && empty( $commentdata[ 'type' ] ) ) {
-		$found = preg_match( '@https?://[^\",]+@i', $commentdata[ 'comment_content' ] );
+		$found = preg_match( '@(https?://|www\.)[^\",]+@i', $commentdata[ 'comment_content' ] );
 		if( ! empty( $commentdata[ 'comment_author_url' ] ) || $found === 1 ) {
 			// increment counters
 			update_option( 'no_links_please_anti_spam_count', no_links_please_anti_spam_counter() + 1, false );

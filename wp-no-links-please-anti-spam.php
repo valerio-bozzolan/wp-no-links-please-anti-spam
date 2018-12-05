@@ -4,10 +4,12 @@ Plugin Name: No links please! Anti-SPAM
 Version:     1.3.0
 Description: This simple but effective anti-SPAM system protects your WordPress site from SPAM. It works without imposing annoying CAPTCHAs, quizzes, configurations, third-party services, artificial intelligence or unicorns. How? It just drops any anonymous comment with links inside, alerting humans about this netiquette.
 Author:      Valerio Bozzolan
-Author URI:  https://boz.reyboz.it/
+Author URI:  https://boz.reyboz.it/?l=en
 Plugin URI:  https://github.com/valerio-bozzolan/wp-no-links-please-anti-spam
 License:     GPL3+
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Domain Path: /languages
+Text Domain: no-links-please-anti-spam
 */
 
 defined( 'ABSPATH' ) or die( 'Hello lamer!' );
@@ -104,3 +106,12 @@ function no_links_please_anti_spam_uninstall() {
 	delete_option( 'no_links_please_anti_spam_count' );
 }
 register_uninstall_hook( __FILE__, 'no_links_please_anti_spam_uninstall' );
+
+/**
+ * Load plugin textdomain.
+ *
+ */
+function no_links_please_anti_spam_load_textdomain() {
+	load_plugin_textdomain( 'no_links_please_anti_spam_uninstall', false, basename( dirname( __FILE__ ) ) . '/languages' );
+}
+add_action( 'init', 'no_links_please_anti_spam_load_textdomain' );

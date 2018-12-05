@@ -1,0 +1,58 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: No links please! Anti-SPAM\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-05 11:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.0; wp-4.4.16"
+
+#: wp-no-links-please-anti-spam.php:30
+msgid "Please try again but without links in the text. Thank you."
+msgstr ""
+
+#: wp-no-links-please-anti-spam.php:51
+msgid "Please remember that links are not appreciated inside comments."
+msgstr ""
+
+#: wp-no-links-please-anti-spam.php:71
+msgid "Anti-spam stats from \"No links, please!\""
+msgstr ""
+
+#: wp-no-links-please-anti-spam.php:80
+#, php-format
+msgid "Spammers blocked since activation: %s and counting!"
+msgstr ""
+
+#. Name of the plugin
+msgid "No links please! Anti-SPAM"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"This simple but effective anti-SPAM system protects your WordPress site from "
+"SPAM. It works without imposing annoying CAPTCHAs, quizzes, configurations, "
+"third-party services, artificial intelligence or unicorns. How? It just "
+"drops any anonymous comment with links inside, alerting humans about this "
+"netiquette."
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/valerio-bozzolan/wp-no-links-please-anti-spam"
+msgstr ""
+
+#. Author of the plugin
+msgid "Valerio Bozzolan"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://boz.reyboz.it/?l=en"
+msgstr ""

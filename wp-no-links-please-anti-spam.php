@@ -108,10 +108,9 @@ function no_links_please_anti_spam_uninstall() {
 register_uninstall_hook( __FILE__, 'no_links_please_anti_spam_uninstall' );
 
 /**
- * Load plugin textdomain.
- *
+ * Load plugin textdomain
  */
 function no_links_please_anti_spam_load_textdomain() {
-	load_plugin_textdomain( 'no_links_please_anti_spam_uninstall', false, basename( dirname( __FILE__ ) ) . '/languages' );
+	load_plugin_textdomain( 'no-links-please-anti-spam', false, basename( dirname( __FILE__ ) ) . '/languages' );
 }
 add_action( 'init', 'no_links_please_anti_spam_load_textdomain' );
